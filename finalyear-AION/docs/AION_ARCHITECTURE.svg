@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#10283a"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#17364a"/>
+      <stop offset="100%" stop-color="#102638"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#66d9ef"/>
+    </marker>
+    <style>
+      .title { font: 700 34px 'Segoe UI', sans-serif; fill: #f4fbff; }
+      .subtitle { font: 400 17px 'Segoe UI', sans-serif; fill: #a9c8d6; }
+      .section { font: 700 18px 'Segoe UI', sans-serif; fill: #dff7ff; }
+      .box-title { font: 700 17px 'Segoe UI', sans-serif; fill: #f4fbff; }
+      .box-text { font: 400 14px 'Segoe UI', sans-serif; fill: #b9d3de; }
+      .stack-title { font: 700 14px 'Segoe UI', sans-serif; fill: #72e0f5; }
+      .stack-text { font: 400 14px 'Segoe UI', sans-serif; fill: #e4f5fa; }
+      .small { font: 400 13px 'Segoe UI', sans-serif; fill: #9dbbc7; }
+      .panel { fill: url(#panel); stroke: #28566b; stroke-width: 1.5; rx: 14; }
+      .component { fill: #123146; stroke: #3d849b; stroke-width: 1.5; rx: 10; filter: url(#shadow); }
+      .accent { fill: #0e4054; stroke: #66d9ef; stroke-width: 1.7; rx: 10; }
+      .security { fill: #3d3022; stroke: #e6b35a; stroke-width: 1.7; rx: 10; }
+      .data { fill: #253948; stroke: #a7d46f; stroke-width: 1.7; rx: 10; }
+      .line { stroke: #66d9ef; stroke-width: 2.3; fill: none; marker-end: url(#arrow); }
+      .dashed { stroke: #8fb9c5; stroke-width: 1.7; stroke-dasharray: 7 6; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1050" fill="url(#bg)"/>
+  <text x="70" y="62" class="title">AION Technical Stack and Architecture</text>
+  <text x="70" y="92" class="subtitle">Windows desktop assistant with a React interface and a local FastAPI workflow engine</text>
+
+  <rect x="70" y="125" width="1460" height="125" class="panel"/>
+  <text x="100" y="157" class="section">TECHNICAL STACK</text>
+  <line x1="100" y1="174" x2="1500" y2="174" stroke="#28566b"/>
+  <text x="105" y="204" class="stack-title">DESKTOP</text>
+  <text x="105" y="226" class="stack-text">Tkinter, pystray, Pillow</text>
+  <text x="350" y="204" class="stack-title">FRONTEND</text>
+  <text x="350" y="226" class="stack-text">React 18, TypeScript, Vite, Tailwind</text>
+  <text x="710" y="204" class="stack-title">BACKEND</text>
+  <text x="710" y="226" class="stack-text">Python 3.11, FastAPI, Uvicorn</text>
+  <text x="1015" y="204" class="stack-title">DATA</text>
+  <text x="1015" y="226" class="stack-text">SQLite, SQLAlchemy, Memory Manager</text>
+  <text x="1320" y="204" class="stack-title">TESTING</text>
+  <text x="1320" y="226" class="stack-text">Pytest, HTTPX, Playwright</text>
+
+  <text x="70" y="295" class="section">RUNTIME ARCHITECTURE</text>
+
+  <rect x="70" y="325" width="300" height="285" class="panel"/>
+  <text x="95" y="357" class="section">USER INTERFACES</text>
+  <rect x="95" y="382" width="250" height="72" class="accent"/>
+  <text x="220" y="410" text-anchor="middle" class="box-title">AION Desktop Button</text>
+  <text x="220" y="433" text-anchor="middle" class="box-text">Tkinter floating window + tray</text>
+  <rect x="95" y="480" width="250" height="72" class="component"/>
+  <text x="220" y="508" text-anchor="middle" class="box-title">React Assistant UI</text>
+  <text x="220" y="531" text-anchor="middle" class="box-text">Plan, permission, approval, status</text>
+
+  <rect x="420" y="325" width="400" height="285" class="panel"/>
+  <text x="445" y="357" class="section">FASTAPI APPLICATION</text>
+  <rect x="445" y="382" width="350" height="62" class="component"/>
+  <text x="620" y="408" text-anchor="middle" class="box-title">REST API Routes</text>
+  <text x="620" y="430" text-anchor="middle" class="box-text">Goals, workflows, permissions, files, memory</text>
+  <rect x="445" y="466" width="350" height="62" class="component"/>
+  <text x="620" y="492" text-anchor="middle" class="box-title">WebSocket Event Bus</text>
+  <text x="620" y="514" text-anchor="middle" class="box-text">Live workflow execution updates</text>
+  <rect x="445" y="550" width="350" height="36" class="component"/>
+  <text x="620" y="574" text-anchor="middle" class="box-text">Uvicorn at 127.0.0.1:8000</text>
+
+  <rect x="870" y="325" width="350" height="285" class="panel"/>
+  <text x="895" y="357" class="section">WORKFLOW ENGINE</text>
+  <rect x="895" y="382" width="300" height="52" class="component"/>
+  <text x="1045" y="414" text-anchor="middle" class="box-title">Goal Interpreter</text>
+  <rect x="895" y="448" width="300" height="52" class="component"/>
+  <text x="1045" y="480" text-anchor="middle" class="box-title">Task Planner</text>
+  <rect x="895" y="514" width="142" height="60" class="security"/>
+  <text x="966" y="540" text-anchor="middle" class="box-title">Permissions</text>
+  <text x="966" y="560" text-anchor="middle" class="box-text">Approval gate</text>
+  <rect x="1053" y="514" width="142" height="60" class="security"/>
+  <text x="1124" y="540" text-anchor="middle" class="box-title">Allowlist</text>
+  <text x="1124" y="560" text-anchor="middle" class="box-text">Action registry</text>
+
+  <rect x="1270" y="325" width="260" height="285" class="panel"/>
+  <text x="1295" y="357" class="section">PERSISTENCE</text>
+  <rect x="1295" y="390" width="210" height="62" class="data"/>
+  <text x="1400" y="418" text-anchor="middle" class="box-title">SQLite Database</text>
+  <text x="1400" y="440" text-anchor="middle" class="box-text">Plans and execution history</text>
+  <rect x="1295" y="474" width="210" height="62" class="data"/>
+  <text x="1400" y="502" text-anchor="middle" class="box-title">Memory + Learning</text>
+  <text x="1400" y="524" text-anchor="middle" class="box-text">Preferences and candidates</text>
+
+  <rect x="320" y="700" width="960" height="205" class="panel"/>
+  <text x="350" y="735" class="section">AGENTS AND REAL AUTOMATION</text>
+  <rect x="350" y="762" width="190" height="85" class="accent"/>
+  <text x="445" y="793" text-anchor="middle" class="box-title">Automation</text>
+  <text x="445" y="816" text-anchor="middle" class="box-text">Executor</text>
+  <text x="445" y="836" text-anchor="middle" class="box-text">Recovery Engine</text>
+  <rect x="575" y="762" width="190" height="85" class="component"/>
+  <text x="670" y="793" text-anchor="middle" class="box-title">Agent Manager</text>
+  <text x="670" y="816" text-anchor="middle" class="box-text">File, Browser, App</text>
+  <text x="670" y="836" text-anchor="middle" class="box-text">Memory, Goal, Planner</text>
+  <rect x="800" y="762" width="190" height="85" class="security"/>
+  <text x="895" y="793" text-anchor="middle" class="box-title">Path Validator</text>
+  <text x="895" y="816" text-anchor="middle" class="box-text">Allowed locations</text>
+  <text x="895" y="836" text-anchor="middle" class="box-text">Protected folders</text>
+  <rect x="1025" y="762" width="225" height="85" class="accent"/>
+  <text x="1137" y="793" text-anchor="middle" class="box-title">File Operations</text>
+  <text x="1137" y="816" text-anchor="middle" class="box-text">Create, rename, move</text>
+  <text x="1137" y="836" text-anchor="middle" class="box-text">combine, delete, verify</text>
+
+  <rect x="430" y="955" width="740" height="58" class="data"/>
+  <text x="800" y="980" text-anchor="middle" class="box-title">Windows File System</text>
+  <text x="800" y="1001" text-anchor="middle" class="box-text">Downloads, Desktop, Documents, Explorer</text>
+
+  <path d="M370 420 L420 420" class="line"/>
+  <path d="M370 516 L420 516" class="line"/>
+  <path d="M820 420 L870 420" class="line"/>
+  <path d="M820 498 L870 498" class="line"/>
+  <path d="M1220 420 L1270 420" class="dashed"/>
+  <path d="M1045 610 L1045 700" class="line"/>
+  <path d="M1045 574 L1045 700" class="line"/>
+  <path d="M540 804 L575 804" class="line"/>
+  <path d="M765 804 L800 804" class="line"/>
+  <path d="M990 804 L1025 804" class="line"/>
+  <path d="M1137 847 L1137 955" class="line"/>
+
+  <text x="70" y="990" class="small">Flow: natural language goal -> plan -> permission approval -> real operation -> verification -> stored result</text>
+</svg>

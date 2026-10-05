@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/deleteconfirmdialog.tsx","./src/components/floatingassistant.tsx","./src/components/onboarding.tsx","./src/components/permissiondialog.tsx","./src/hooks/index.ts","./src/pages/index.ts","./src/services/api.ts","./src/types/api.ts"],"version":"5.9.3"}

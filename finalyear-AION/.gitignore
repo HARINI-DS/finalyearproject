@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environment
+.env
+
+# Database artifacts
+*.db-shm
+*.db-wal
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
